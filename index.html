@@ -8,6 +8,22 @@
             font-family: Arial, sans-serif;
             background:#c7e4f188;
         }
+        h2 {
+            text-align: center;
+        }
+        .search-box {
+            text-align: center;
+            margin: 20px;
+        }
+        .search-box input {
+            padding: 6px;
+            margin: 5px;
+            width: 180px;
+        }
+        .search-box button {
+            padding: 6px 15px;
+            cursor: pointer;
+        }
         .container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -19,6 +35,7 @@
             padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            color: white;
         }
         img {
             width: 100%;
@@ -34,8 +51,17 @@
 </head>
 <body>
 
-<h2 style="text-align:center;">💢Country Details based on flag💢</h2>
+<h2>💢 Country Details based on Flag 💢</h2>
 
+<!-- 🔍 Search Section -->
+<div class="search-box">
+    <input type="text" id="firstLetter" placeholder="First Letter (A / a)">
+    <input type="text" id="capitalSearch" placeholder="Capital Name">
+    <input type="number" id="populationSearch" placeholder="Max Population">
+    <button onclick="searchCountries()">Search</button>
+</div>
+
+<!-- Country Cards -->
 <div class="container" id="countryContainer"></div>
 
 <script src="script.js"></script>
